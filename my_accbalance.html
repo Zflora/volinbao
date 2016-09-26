@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="format-detection" content="email=no"/>
+<meta charset="UTF-8">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/header.css" rel="stylesheet" type="text/css">
+<link href="css/my.css" rel="stylesheet" type="text/css">
+<title>沃邻宝</title>
+</head>
+<body class="mb98" id="my_accbalance">
+    <!-- header -->
+    <header>
+        <a class="header_icon l pr24" onclick="javascript:history.back(-1); "><img src="images/header_L_right.png" alt=""></a>
+        <span class="f36">提现</span>
+    </header>
+    <!-- header结束 -->
+    <!-- 卡信息 -->
+    <aside class="mt118 p15_30 bgwh mb30" onclick="javascript:window.location.href='my_bank.html','_self'">
+        <div class="h80 radius dib abs"><img src="images/1-14.png" alt="" class="h80"></div>
+        <div class="dib w514 dib ml90">
+            <p class="f30 mb20 mt5"><strong>中国建设银行</strong></p>
+            <p class="f24 g9 inform_txt">尾号2072</p>
+        </div>
+        <div class="h20 dib r mt30"><img src="images/arr_r.png" alt="" class="h20"></div>
+    </aside>
+    <!-- 卡信息结束 -->
+    <!-- 到账时间 -->
+    <aside>
+        <section class="p30 bgwh">
+            <p class="f30 dib mr20"><strong>到账时间</strong></p>
+            <p class="f24 dib r">两小时内到账</p>
+        </section>
+        <section class="p30"><p class="f24 dib mb10 g9">可提现余额：<span class="g09c">10.00元</span></p></section>
+    </aside>
+    <!-- 到账时间结束 -->
+    <!-- 请输入充值金额 -->
+    <aside class="">
+        <section class="p30 bgwh">
+            <p class="f30 dib mr78"><strong>金额</strong></p>
+            <input type="tel" class="f30 g9 dib" placeholder="提现金额">
+        </section>
+        <section class="p30"><p class="f24 dib mb10 g9">该卡本次最多可充值10,000.00元</p></section>
+    </aside>
+    <!-- 请输入充值金额结束 -->
+    <!-- 按钮 -->
+    <aside class="mt35">
+        <button class="f36 g9 ml30">确认提现</button>
+    </aside>
+    <!-- 按钮结束 -->
+    <!-- 遮罩 -->
+    <aside class="shadeall dn"></aside>
+    <!-- 遮罩结束 -->
+    <!-- 弹框 -->
+    <aside class="my_collect_del dn">
+        <p class="f36">友情提示</p>
+        <p class="f26 g6 mt-20 mb20">是否确认您的转账帐户和转账金额。</p>
+        <div class="f28"><button class="my_collect_del_btn bgwh">否</button><button class="wh my_collect_del_btn bg09c wh">是</button></div>
+    </aside>
+    <!-- 弹框结束 -->
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+// 判断input中是有值
+function input(){
+    if ($("input").val()=="") {
+        $(".mt35 button").css({
+            'background':'#fff',
+            'color':'#999'
+        }).attr("disabled","disabled");
+    }else{
+        $(".mt35 button").css({
+            'background':'#f90',
+            'color':'#fff'
+        }).removeAttr("disabled");
+    }
+}
+setInterval(input,100);
+//确认弹框
+    $(".mt35 button").click(function(){
+        $(".shadeall").show();
+        $(".my_collect_del").show();
+    })
+    $(".my_collect_del_btn").click(function(){
+        $(".shadeall").hide();
+        $(".my_collect_del").hide();
+    })
+    $(".shadeall").click(function(){
+        $(".shadeall").hide();
+        $(".my_collect_del").hide();
+    })
+</script>
+</html>

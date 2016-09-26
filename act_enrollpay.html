@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="format-detection" content="email=no"/>
+<meta charset="UTF-8">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/header.css" rel="stylesheet" type="text/css">
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<title>沃邻宝</title>
+</head>
+<body id="act_enrollpay">
+<form action="">
+    <!-- header -->
+    <header>
+        <a class="header_icon l pr24" onclick="javascript:history.back(-1); "><img src="images/header_L_right.png" alt=""></a>
+        <span class="f36">报名支付</span>
+        <!-- <a class="header_icon r pl24 f32 wh m0 pr30" id="" onclick="javascript:window.location
+        .href='new_act.html','_self'"><img src="images/plus.png" alt=""></a>  -->
+    </header>
+    <!-- header结束 -->
+    <!-- 详情 -->
+    <aside class="bgwh pb0 mt118 mb30">
+        <section class="p30">
+            <p class="f28 dib">青果公益 端午大型茶文化节 </p>
+            <p class="f28 dib r">￥300</p>
+        </section>
+        <section class="p30">
+            <p class="f28 dib l">人数：</p>
+            <p class="f28 dib r">1</p>
+        </section>
+        <section class="p30">
+            <p class="f28 dib">总价：</p>
+            <p class="f28 dib r">￥300</p>
+        </section>
+    </aside>
+    <!-- 详情结束 -->
+    <!-- 价格 -->
+    <aside class="bgwh pb0">
+        <section class="p30">
+            <p class="f28 dib">代金券： </p>
+            <div class="h20 dib r"><img src="images/arr_r.png" alt="" class="h20"></div>
+            <p class="f28 dib r mr10">使用代金券 </p>
+        </section>
+        <section class="p30">
+            <p class="f28 dib l">窝游余额：</p>
+            <p class="f28 dib r">0元<span class="g09c">（不支持余额支付）</span></p>
+        </section>
+        <section class="p30">
+            <p class="f28 dib">还需支付：</p>
+            <p class="f28 dib r"><span class="g09c">￥300</span></p>
+        </section>
+    </aside>
+    <!-- 价格 -->
+    <!-- 选择支付方式 -->
+    <aside class="pb0 mb30">
+        <section class="p30 mb30">
+            <p class="f28 dib l mb10">选择支付方式</p>
+        </section>
+        <section class=" bgwh" >
+            <div class="p30">
+                <div class="h80 radius dib abs mr30"><img src="images/my/pay (1).png" alt="" class="h80"></div>
+                <div class="dib w500 dib ml90">
+                    <p class="f30 mb20">银行卡支付</p>
+                    <p class="f24 lh30 pt5 g9">支持储蓄卡信用卡，无需开通网银</p>
+                </div>
+                <div class="dib r mt20"><input type="radio" name="pay" class="radio radio_input"></div>
+            </div>
+            <div class="p30">
+                <div class="h80 radius dib abs mr30"><img src="images/my/pay (2).png" alt="" class="h80"></div>
+                <div class="dib w500 dib ml90">
+                    <p class="f30 mb20">支付宝支付</p>
+                    <p class="f24 lh30 pt5 g9">推荐有支付宝的用户使用</p>
+                </div>
+                <div class="dib r mt20"><input type="radio" name="pay" class="radio radio_input"></div>
+            </div>
+            <div class="p30">
+                <div class="h80 radius dib abs mr30"><img src="images/my/pay (3).png" alt="" class="h80"></div>
+                <div class="dib w500 dib ml90">
+                    <p class="f30 mb20">微信支付</p>
+                    <p class="f24 lh30 pt5 g9">推荐安装微信5.0以上版本的用户使用</p>
+                </div>
+                <div class="dib r mt20"><input type="radio" checked="checked" name="pay" class="radio radio_input" id="weixin"></div>
+            </div>
+        </section>
+    </aside>
+    <!-- 选择支付方式结束 -->
+
+    <!-- 按钮 -->
+    <aside class="mt118 mb98">
+        <button class="f28 wh ml30">确认报名</button>
+    </aside>
+    <!-- 按钮结束 -->
+</form>
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+$("input[type='radio']").click(function(){
+    if($(this).hasClass("radio_on")){ 
+            $(this).removeClass("radio_on");
+        }else{ 
+            $(this).addClass("radio_on").parents(".p30").siblings().find("input").removeClass("radio_on");
+        } 
+})
+</script>
+</html>

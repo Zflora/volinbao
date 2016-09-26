@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="format-detection" content="email=no"/>
+<meta charset="UTF-8">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/header.css" rel="stylesheet" type="text/css">
+<link href="css/my.css" rel="stylesheet" type="text/css">
+<title>沃邻宝</title>
+</head>
+<body class="mb98" id="my_act">
+    <!-- header -->
+    <header>
+        <a class="header_icon l pr24" onclick="javascript:history.back(-1); "><img src="images/header_L_right.png" alt=""></a>
+        <span class="f36">我的活动</span>
+        <!-- <a  class="header_icon r pl24 pr30"><img src="images/header_L_right.png" alt=""></a>  -->
+    </header>
+    <!-- header结束 -->
+    <main class="mt88">
+        <aside class="bgwh bbc">
+            <h1 class="f28 dib brc bb09c">发布列表</h1>
+            <h1 class="f28 dib">领取列表</h1>
+        </aside>
+        <aside class="my_main">
+            <section class="abs">
+                <div class="p15_30 bbc bgwh my_item pt22 pb22 " onclick="javascript:window.location.href='act_main.html','_self'">
+                    <div class="my_act_pic dib">
+                        <img src="images/1-02.png" alt="">
+                        <div class="my_act_lable">
+                            <p>报名</p>
+                            <p><strong>200</strong></p>
+                        </div>
+                    </div>
+                    <div class="w435 dib">
+                        <p class="f28 lh40 mb10">羽毛球场馆开阔式集体运动项目挑战肺活力</p>
+                        <div class="mb5">
+                            <img src="images/my/time.png" alt="" class="h25">
+                            <span class="f24 g9">05-12 17:00开始</span>
+                        </div>
+                        <div class="">
+                            <img src="images/my/add.png" alt="" class="h25">
+                            <span class="f24 g9">上海市松江区</span>
+                            <span class="f24 g09c r mt5">已发布</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p15_30 bbc bgwh my_item pt22 pb22 " onclick="javascript:window.location.href='act_main.html','_self'">
+                    <div class="my_act_pic dib">
+                        <img src="images/1-02.png" alt="">
+                        <div class="my_act_lable abs">
+                            <p>报名</p>
+                            <p><strong>200</strong></p>
+                        </div>
+                    </div>
+                    <div class="w435 dib">
+                        <p class="f28 lh40 mb10">羽毛球场馆开阔式集体运动项目挑战肺活力</p>
+                        <div class="mb5">
+                            <img src="images/my/time.png" alt="" class="h25">
+                            <span class="f24 g9">05-12 17:00开始</span>
+                        </div>
+                        <div class="">
+                            <img src="images/my/add.png" alt="" class="h25">
+                            <span class="f24 g9">上海市松江区</span>
+                            <span class="f24 g09c r mt5">已发布</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="dn abs">
+                <div class="p15_30 bbc bgwh my_item pt22 pb22 " onclick="javascript:window.location.href='act_main.html','_self'">
+                    <div class="my_act_pic dib ">
+                        <img src="images/1-02.png" alt="">
+                        <div class="my_act_lable abs">
+                            <p>报名</p>
+                            <p><strong>200</strong></p>
+                        </div>
+                    </div>
+                    <div class="w435 dib">
+                        <p class="f28 lh40 mb10">羽毛球场馆开阔式集体运动项目挑战肺活力</p>
+                        <div class="mb5">
+                            <img src="images/my/time.png" alt="" class="h25">
+                            <span class="f24 g9">05-12 17:00开始</span>
+                        </div>
+                        <div class="">
+                            <img src="images/my/add.png" alt="" class="h25">
+                            <span class="f24 g9">上海市松江区</span>
+                            <span class="f24 g09c r mt5">已参与</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p15_30 bbc bgwh my_item pt22 pb22 " onclick="javascript:window.location.href='act_main.html','_self'">
+                    <div class="my_act_pic dib">
+                        <div class="shade f36 wh fw">已结束</div>
+                        <img src="images/1-03.png" alt="">
+                        <div class="my_act_lable_end abs">
+                            <p>报名</p>
+                            <p><strong>200</strong></p>
+                        </div>
+                    </div>
+                    <div class="w435 dib">
+                        <p class="f28 lh40 mb10">羽毛球场馆开阔式集体运动项目挑战肺活力</p>
+                        <div class="mb5">
+                            <img src="images/my/time.png" alt="" class="h25">
+                            <span class="f24 g9">05-12 17:00开始</span>
+                        </div>
+                        <div class="">
+                            <img src="images/my/add.png" alt="" class="h25">
+                            <span class="f24 g9">上海市松江区</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </aside>
+    </main>
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+$(function () {
+    // 选项卡
+    var i=0;
+    $("h1").click(function(){
+        i=$("h1").index($(this));
+        $(this).addClass("bb09c").siblings().removeClass("bb09c");
+        $(".my_main section").eq(i).show().siblings().hide();
+    })
+})
+</script>
+</html>

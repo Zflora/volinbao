@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="format-detection" content="email=no"/>
+<meta charset="UTF-8">
+<title>沃邻宝</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/linkman.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <a class="header_icon l pr24" onclick="javascript:history.back(-1); "><img src="images/header_L_right.png" alt=""></a>
+        <span class="f36">选择联系人</span>
+        <a class="header_icon r f36 wh" id="linkman" onclick="javascript:window.location.href='chat.html','_self'"><button>聊天(<span id="num">0</span>)</button></a> 
+    </header>
+    <!-- header结束 -->
+    <!-- 搜索 -->
+    <aside class="p20 mt88 bgc">
+        <section class="bgwh ss">
+            <img src="images/search.png" alt="" class="h28 mr15 mt5">
+            <input type="text" placeholder="搜索" class="f28 g9 mt5">
+        </section>
+    </aside>
+    <!-- 搜索结束 -->
+    <!-- 选择联系人 -->
+    <aside class="p20 bgwh ">
+        <img src="images/my/circle (3).png" alt="" class="h35 dib mr15">
+        <p class="f28 dib inform_txt">选择联系人</p>
+    </aside>
+    <!-- 选择联系人结束 -->
+    <!-- 字母弹框 -->
+    <aside id="letter"></aside>
+    <!-- 字母弹框结束 -->
+    <!-- 成员 -->
+    <aside class="sort_box">
+        <section class="sort_list ">
+            <div class="dib abs"><input type="checkbox"  class="checkbox check_input vtt"></div>
+            <div class="num_logo ml60 dib">
+                <img src="images/1-10.png" alt="">
+            </div>
+            <div class="num_name ml20 dib f28 vt">张三</div>
+        </section>
+        <section class="sort_list ">
+            <div class="dib abs"><input type="checkbox"  class="checkbox check_input vtt"></div>
+            <div class="num_logo ml60 dib">
+                <img src="images/1-10.png" alt="">
+            </div>
+            <div class="num_name ml20 dib f28 vt">李四</div>
+        </section>
+        <section class="sort_list ">
+            <div class="dib abs"><input type="checkbox"  class="checkbox check_input vtt"></div>
+            <div class="num_logo ml60 dib">
+                <img src="images/1-10.png" alt="">
+            </div>
+            <div class="num_name ml20 dib f28 vt">a1</div>
+        </section>
+        <section class="sort_list ">
+            <div class="dib abs"><input type="checkbox"  class="checkbox check_input vtt"></div>
+            <div class="num_logo ml60 dib">
+                <img src="images/1-10.png" alt="">
+            </div>
+            <div class="num_name ml20 dib f28 vt">ccc</div>
+        </section>
+        <section class="sort_list ">
+            <div class="dib abs"><input type="checkbox"  class="checkbox check_input vtt"></div>
+            <div class="num_logo ml60 dib">
+                <img src="images/1-10.png" alt="">
+            </div>
+            <div class="num_name ml20 dib f28 vt">dd</div>
+        </section>
+        <section class="sort_list ">
+            <div class="dib abs"><input type="checkbox"  class="checkbox check_input vtt"></div>
+            <div class="num_logo ml60 dib">
+                <img src="images/1-10.png" alt="">
+            </div>
+            <div class="num_name ml20 dib f28 vt">rr</div>
+        </section>
+        <section class="sort_list ">
+            <div class="dib abs"><input type="checkbox"  class="checkbox check_input vtt"></div>
+            <div class="num_logo ml60 dib">
+                <img src="images/1-10.png" alt="">
+            </div>
+            <div class="num_name ml20 dib f28 vt">kk</div>
+        </section>
+        <section class="sort_list ">
+            <div class="dib abs"><input type="checkbox"  class="checkbox check_input vtt"></div>
+            <div class="num_logo ml60 dib">
+                <img src="images/1-10.png" alt="">
+            </div>
+            <div class="num_name ml20 dib f28 vt">sss</div>
+        </section>
+        <section class="sort_list ">
+            <div class="dib abs"><input type="checkbox"  class="checkbox check_input vtt"></div>
+            <div class="num_logo ml60 dib">
+                <img src="images/1-10.png" alt="">
+            </div>
+            <div class="num_name ml20 dib f28 vt">qq</div>
+        </section>
+        <section class="sort_list ">
+            <div class="dib abs"><input type="checkbox"  class="checkbox check_input vtt"></div>
+            <div class="num_logo ml60 dib">
+                <img src="images/1-10.png" alt="">
+            </div>
+            <div class="num_name ml20 dib f28 vt">ff</div>
+        </section>
+        <section class="sort_list ">
+            <div class="dib abs"><input type="checkbox"  class="checkbox check_input vtt"></div>
+            <div class="num_logo ml60 dib">
+                <img src="images/1-10.png" alt="">
+            </div>
+            <div class="num_name ml20 dib f28 vt">-11</div>
+        </section>
+    </aside>
+    <!-- 成员结束 -->
+    <!-- 字母 -->
+    <aside class="initials">
+        <ul>
+        </ul>
+    </aside>
+    <!-- 字母结束 -->
+</body>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<!-- 拼音 -->
+<script type="text/javascript" src="js/jquery.charfirst.pinyin.js"></script>
+<script type="text/javascript" src="js/sort.js"></script>
+<script type="text/javascript">
+    //checkbox
+    $("input[type='checkbox']").click(function(){
+            var count=0;
+        if (this.checked) {
+            $(this).addClass("checkbox_on");
+        }else{
+            $(this).removeClass("checkbox_on");
+        };
+        //计算选中几个
+        for(var i=0;i<$("input[type='checkbox']").length;i++){
+            if($("input[type='checkbox']").eq(i).is(":checked")){
+                count++;
+            }
+        }
+        $("#num").text(count);
+        function input(){
+            if (count==0) {
+                $("button").attr("disabled","disabled").css("opacity","0.5");
+            }else{
+                $("button").removeAttr("disabled").css("opacity","1");
+            };
+        }
+        setInterval(input,100);
+    })
+</script>
+</html>

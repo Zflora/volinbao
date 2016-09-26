@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="format-detection" content="email=no"/>
+<meta charset="UTF-8">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/header.css" rel="stylesheet" type="text/css">
+<link href="css/my.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/LArea.min.css">
+<title>沃邻宝</title>
+</head>
+<body class="mb98" id="my_editnews">
+<form action="">
+    <!-- header -->
+    <header>
+        <a class="header_icon l pr24" onclick="javascript:window.location.href='my_set.html','_self'"><img src="images/header_L_right.png" alt=""></a>
+        <span class="f36">编辑个人资料</span>
+        <a class="header_icon r pl24 pr30 f32 wh inform_txt" onclick="javascript:window.location.href='my_set.html','_self'">保存</a> 
+    </header>
+    <!-- header结束 -->
+    <!-- 头像 -->
+    <aside class="bgwh p15_30 mt118 mb30 w">
+        <p class="f28 dib inform_txt mr20 vtt mt-30">头像</p>
+        <label for="up_img" class="h100 dib tr w600" id="imgdiv"><img id="imgShow" alt="" src="images/1-10.png" class="h100 dib tr pt5"/></label>
+        <input type="file" id="up_img" class="dn" />
+    </aside>
+    <!-- 头像 -->
+    <!-- 资料 -->
+    <aside class="bgwh pb0 mb30 w">
+        <section class="pt20 pb20 bbc pl30 pr30" onclick="javascript:window.location.href='my_name.html','_self'">
+            <p class="f28 dib inform_txt">昵称</p>
+            <div class="h20 dib r pt5"><img src="images/arr_r.png" alt="" class="h20"></div>
+            <input type="text" class="f28 dib r tr mr15 g0 rel top" value="窝游" readonly>
+        </section>
+        <section class="pt20 pb20 bbc pl30 pr30" id="sex">
+            <p class="f28 dib inform_txt">性别</p>
+            <div class="h20 dib r pt5"><img src="images/arr_r.png" alt="" class="h20"></div>
+            <input type="text" class="f28 dib r tr mr15 g0 rel top" value="男" readonly>
+        </section>
+        <section class="pt20 pb20 pl30 pr30">
+            <p class="f28 dib inform_txt">所在地</p>
+            <div class="h20 dib r pt5"><img src="images/arr_r.png" alt="" class="h20"></div>
+            <input type="text" class="f28 dib r tr mr15 g0 rel top" value="上海" id="demo1" readonly="readonly">
+        </section>
+    </aside>
+    <!-- 资料 -->
+    <!-- 私人信息 -->
+    <aside class="bgwh pb0 mb30 w">
+        <section class="pt20 pb20 bbc pl30 pr30"  onclick="javascript:window.location.href='my_phone.html','_self'">
+            <p class="f28 dib inform_txt">手机号</p>
+            <div class="h20 dib r pt5"><img src="images/arr_r.png" alt="" class="h20"></div>
+            <input type="tel"  class="f28 dib r tr mr15 g0 rel top" value="15112155151" readonly>
+        </section>
+        <section class="pt20 pb20 pl30 pr30"  onclick="javascript:window.location.href='my_realname.html','_self'">
+            <p class="f28 dib inform_txt">真实姓名</p>
+            <div class="h20 dib r pt5"><img src="images/arr_r.png" alt="" class="h20"></div>
+            <input type="text" class="f28 dib r tr mr15 g0 rel top" value="窝游云" readonly>
+        </section>
+    </aside>
+    <!-- 私人信息 -->
+    <!-- 遮罩 -->
+    <aside class="shadeall dn"></aside>
+    <!-- 遮罩结束 -->
+    <!-- 性别 -->
+    <aside class="my_editnews_sex dn">
+        <p class="f28 tc bgwh bbc">男</p>
+        <p class="f28 tc bgwh">女</p>
+        <button class="f28 w bgwh mt15">取消</button>
+    </aside>
+    <!-- 性别结束 -->
+</form>
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<!-- 图片预览 -->
+<script type="text/javascript" src="js/uploadPreview.js"></script>
+<!-- 城市选择 -->
+<script src="js/LAreaData1.js"></script>
+<script src="js/LArea.min.js"></script>
+<script type="text/javascript">
+    //男女
+    $("#sex").click(function(){
+        $(".my_editnews_sex").show();
+        $(".shadeall").show();
+    })
+    $(".my_editnews_sex button").click(function(){
+            $(".dn").hide();
+        })
+    $(".my_editnews_sex p").click(function(){
+        $(".dn").hide();
+        $("#sex input").val($(this).html());
+    })
+    // 城市选择
+    var area1 = new LArea();
+    area1.init({
+        'trigger': '#demo1', //触发选择控件的文本框，同时选择完毕后name属性输出到该位置
+        'valueTo': '#value1', //选择完毕后id属性输出到该位置
+        'keys': {
+            id: 'id',
+            name: 'name'
+        }, //绑定数据源相关字段 id对应valueTo的value属性输出 name对应trigger的value属性输出
+        'type': 1, //数据源类型
+        'data': LAreaData //数据源
+    });
+    area1.value=[1,13,3];//控制初始位置，注意：该方法并不会影响到input的value
+    var area2 = new LArea();
+    area2.init({
+        'trigger': '#demo2',
+        'valueTo': '#value2',
+        'keys': {
+            id: 'value',
+            name: 'text'
+        },
+        'type': 2,
+        'data': [provs_data, citys_data, dists_data]
+    });
+    // 图片预览
+    window.onload = function () { 
+            new uploadPreview({ UpBtn: "up_img", DivShow: "imgdiv", ImgShow: "imgShow" });
+        }
+</script>
+</html>

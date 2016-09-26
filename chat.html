@@ -1,0 +1,62 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="format-detection" content="email=no"/>
+<meta charset="UTF-8">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/header.css" rel="stylesheet" type="text/css">
+<link href="css/chat.css" rel="stylesheet" type="text/css">
+<title>沃邻宝</title>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <a class="header_icon l pr24 mt30" onclick="javascript:history.back(-1); "><img src="images/header_L_right.png" alt=""></a>
+        <span class="f36">昵称</span>
+        <a class="header_icon r pl24 f32 wh m0 pr30" id="" onclick="javascript:window.location.href='my_groupchatdeso.html','_self'">管理</a>
+    </header>
+    <!-- header结束 -->
+    <main id="contain" class="mt88">
+        <!-- 聊天内容 -->
+        <aside id="content" >
+            <div id="txt"></div> 
+        </aside>
+        <!-- 聊天内容结束 -->
+        <!-- footer -->
+        <aside class="footer">
+            <div  id="but2" class="dib"><p id="tuplen" class="f28 w100">发送</p></div>
+            <input type="text"  id="but1" value="" class="dib">
+            <!-- <div id="tupian" class="dn"><img src="img/1.png" id="footer" class="dn"></div> -->
+        </aside>
+        <!-- footer结束 -->
+    </main>
+
+</body>
+<script type="text/javascript" src="js/common.js"></script>
+<script Language="JavaScript">
+window.onload=function(){
+var oCon=document.getElementById('contain');
+var oBu1=document.getElementById('but1');
+var oBu2=document.getElementById('but2');
+var oCt=document.getElementById('content');
+var oFoot=document.getElementById('footer');
+var Onoff=true;
+var oText=document.getElementById('txt');
+var oTu=document.getElementById('tupian');
+var oTp=document.getElementById('tuplen');
+oBu2.onclick=function(){
+if (Onoff){
+ oText.innerHTML=oText.innerHTML+'<div class="mb50">'+'<br/>'+'<div class="right" style="border:0;background:none;width:auto">'+'<img src="images/1-17.png" id="footer" style="border:0;background:none;width:auto">'+'</div>'+'<div class="right mt20">'+oBu1.value+'</div>'+'<br/></div>';
+}
+else{
+
+ oText.innerHTML=oText.innerHTML+'<div class="mb50">'+'<br/>'+'<div class="left" style="border:0;background:none;width:auto">'+'<img src="images/1-17.png" id="footer" style="border:0;background:none;width:auto">'+'</div>'+'<div class="right mt20">'+oBu1.value+'</div>'+'<br/></div>';
+};
+oBu1.value='';
+
+};
+};
+</script>
+</html>

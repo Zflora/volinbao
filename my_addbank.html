@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="format-detection" content="email=no"/>
+<meta charset="UTF-8">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/header.css" rel="stylesheet" type="text/css">
+<link href="css/my.css" rel="stylesheet" type="text/css">
+<style>
+    .v2{margin-left: 0.5rem;width: 4rem;margin-top: 0.01rem;}
+    .v3{width: 1rem;}
+    .h34{height: 0.34rem;}
+</style>
+<title>沃邻宝</title>
+</head>
+<body class="mb98" id="my_addbank">
+    <!-- header -->
+    <header>
+        <a class="header_icon l pr24" onclick="javascript:history.back(-1); "><img src="images/header_L_right.png" alt=""></a>
+        <span class="f36">添加银行卡</span>
+    </header>
+    <!-- header结束 -->
+    <aside class="mt118 pl24 mb20 g9 f24">请绑定持卡人本人的银行卡</aside>
+    <aside class="bgwh pb0 mt359 mb30">
+        <section class="pt20 pb20 bbc pl30 pr30">
+            <p class="f30 dib v3">持卡人</p>
+            <input type="text" value="" class="f30 v2 dib" placeholder="持卡人">
+            <div class="h34 dib r top"><img src="images/my/bank.png" alt="" class="h34"></div>
+        </section>
+        <section class="pt20 pb20 pl30 pr30">
+            <p class="f30 dib v3">卡号</p>
+            <input type="tel" value="" class="f30 v2 dib">
+        </section>
+    </aside>
+    <!-- 按钮 -->
+    <aside class="mt118 mb98" onclick="javascript:window.location.href='my_addbanknews.html','_self'">
+        <input type="button" class="f36 ml30" id="button" value="下一步">
+    </aside>
+    <!-- 按钮结束 -->
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+    $('sub').html("**** **** **** ");//赋值
+        //判断input中是有值
+       function input(){
+           if ($("input").eq(1).val()=="") {
+               $("button").css({
+                   'background':'#fff',
+                   'color':'#999'
+               });
+           }else{
+               $("button").css({
+                   'background':'#f90',
+                   'color':'#fff'
+               });
+           }
+       }
+       setInterval(input,100);
+</script>
+</html>

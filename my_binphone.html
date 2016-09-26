@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="format-detection" content="email=no"/>
+<meta charset="UTF-8">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/header.css" rel="stylesheet" type="text/css">
+<link href="css/my.css" rel="stylesheet" type="text/css">
+<title>沃邻宝</title>
+</head>
+<body class="mb98" id="my_binphone">
+<form action="my_bindings.html">
+    <!-- header -->
+    <header>
+        <a  class="header_icon l pr24"  onclick="javascript:history.back(-1); "><img src="images/header_L_right.png" alt=""></a>
+        <span class="f36">绑定设置</span>
+    </header>
+    <!-- header结束 -->
+    <!-- 绑定设置 -->
+    <aside class="bgwh pb0 mt118 mb30">
+        <section class="p30 bbc">
+            <input class="g6 f28 bdphone dib" placeholder="请输入手机号" maxlength="11" type="tel">
+        </section>
+        <section class="p30">
+            <input class="g6 f28 bdphone dib" placeholder="请输入收到的验证码" maxlength="6" type="tel">
+            <p class="f24 dib r pt5 g09c code radius10">点击获取验证码</p>
+        </section>
+    </aside>
+    <!-- 绑定设置结束 -->
+    <!-- 按钮 -->
+    <aside class="mt118">
+        <button class="f36 g9 ml30 bgf90 wh"><strong>确认</strong></button>
+    </aside>
+    <!-- 按钮结束 -->
+    <!-- 遮罩 -->
+    <aside class="shadeall dn"></aside>
+    <!-- 遮罩结束 -->
+    <!-- 删除弹框 -->
+    <aside class="my_collect_del dn">
+        <p class="f26 g6 mt-20 mb20">是否确认您此前邮箱的解绑？</p>
+        <div class="f28"><button class="my_collect_del_btn bgwh">否</button><button class="wh my_collect_del_btn bg09c wh">是</button></div>
+    </aside>
+    <!-- 删除弹框结束 -->
+</form>
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+    //js把手机号中间四位数用*代替
+    $(function (){
+        var bdphone = $('.bdphone').text(); //获取要改的元素内容
+        var mphone = bdphone.substr(0, 3) + '****' + bdphone.substr(7);//方法
+        $('.bdphone').text(mphone);//赋值
+    })
+    //解绑弹框
+    $("#Unbundling").click(function(){
+        $(".shadeall").show();
+        $(".my_collect_del").show();
+    })
+    $(".my_collect_del_btn").click(function(){
+        $(".shadeall").hide();
+        $(".my_collect_del").hide();
+    })
+    $(".shadeall").click(function(){
+        $(".shadeall").hide();
+        $(".my_collect_del").hide();
+    })
+</script>
+</html>

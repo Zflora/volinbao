@@ -1,0 +1,12 @@
+@charset "UTF-8";
+#contain{background:#eee;}
+#content{height:11.48rem;width: 100%;position:absolute;overflow:auto;font-size:0.24rem;}
+.footer{position: fixed;bottom:0;background: #fff;height: 0.98rem;width: 100%;}
+#but1{line-height: 0.7rem;border:0.02rem solid #ccc;width:5.5rem;margin-top:0.1rem;font-size: 0.28rem;display: inline-block;text-align: start;position: absolute;left: 0.3rem;border-radius: 0.1rem;padding-left: 0.2rem}
+#but2{text-align:center;margin-left: 6rem;margin-top: 0.1rem;}
+#tuplen,#footer{width: auto;line-height: 0.7rem;border: 0.02rem solid #ccc;border-radius: 10%;}
+.right{float:right;background: #fff;border: 0.02rem solid #ccc;border-radius: 0.1rem;padding: 0 0.2rem;word-break:break-all;line-height: 0.3rem;padding: 0.1rem;max-width: 5rem;}
+.left{float:left;background: url(../images/1-16.png) no-repeat;background-size: 100%;word-break:break-all;line-height: 0.3rem;padding: 0.1rem;max-width: 5rem;}
+#tupian{width:0.7rem;height:0.7rem;display: inline-block;margin-left: 0.3rem;margin-top: 0.05rem;}
+#txt{width: auto;height: 0.4rem;padding: 0.2rem 0.3rem;}
+#footer{width: 0.8rem;height: 0.8rem;}

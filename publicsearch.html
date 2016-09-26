@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="format-detection" content="email=no"/>
+<meta charset="UTF-8">
+<title>沃邻宝</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/header.css" rel="stylesheet" type="text/css">
+<link href="css/my.css" rel="stylesheet" type="text/css">
+</head>
+<body id="publincsearch">
+    <!-- header -->
+    <header class="p15_30 tl pb0">
+        <aside class="bgwh dib w600 radius10 pt5">
+            <img src="images/my/publincsearch.png" alt="" class="h28 dib mr5 ml15 pt5 mt5">
+            <input type="text" placeholder="搜索公众号" class="f28 g9 dib w514 mt5">
+        </aside>
+        <a class="header_icon r f36 wh pr30" onclick="javascript:window.location.href='publicnum.html','_self'">取消</a> 
+    </header>
+    <!-- header结束 -->
+    <!-- 消息 -->
+    <aside class="mb30 mt118">
+        <section class="p15_30 mb30">
+            <p class="f28 dib l mb10 g9 ml20">公众号</p>
+        </section>
+        <section>
+            <div class="p30 bbc bgwh">
+                <div class="h80 radius dib abs"><img src="images/1-10.png" alt="" class="h80"></div>
+                <div class="dib w600 dib ml90">
+                    <p class="mb30"><span class="f28">露Vchen</span></p>
+                    <p class="f24 lh30">
+                        <span class="f24 dib w514 my_news_txt g8c8c8c">我们于日用必需的东西以外，必须还有一点无用的游戏与享乐，生活才觉得有意思。</span>
+                    </p>
+                </div>
+            </div>
+            <div class="p30 bbc bgwh">
+                <div class="h80 radius dib abs"><img src="images/1-10.png" alt="" class="h80"></div>
+                <div class="dib w600 dib ml90">
+                    <p class="mb30"><span class="f28">露Vchen</span></p>
+                    <p class="f24 lh30">
+                        <span class="f24 dib w514 my_news_txt g8c8c8c">我们于日用必需的东西以外，必须还有一点无用的游戏与享乐，生活才觉得有意思。</span>
+                    </p>
+                </div>
+            </div>
+            <div class="p30 bgwh">
+                <div class="h80 radius dib abs"><img src="images/1-10.png" alt="" class="h80"></div>
+                <div class="dib w600 dib ml90">
+                    <p class="mb30"><span class="f28">露Vchen</span></p>
+                    <p class="f24 lh30 mb10">
+                        <span class="f24 dib w514 my_news_txt g8c8c8c">我们于日用必需的东西以外，必须还有一点无用的游戏与享乐，生活才觉得有意思。</span>
+                    </p>
+                    <p class="f24">已关注</p>
+                </div>
+            </div>
+        </section>
+    </aside>
+    <!-- 消息结束 -->
+</body>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+    //只显示固定字数
+    for(var i=0;i<$('.my_news_txt').length;i++){//index_txt  要改的元素
+            var bdphone = $('.my_news_txt').eq(i).text(); //获取要改的元素内容
+            var mphone = bdphone.substr(0, 50)+'...'  ;//方法
+            $('.my_news_txt').eq(i).text(mphone);//赋值
+        }
+</script>
+</html>

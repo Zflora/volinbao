@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/*注册*/
+#register .register_yz{width: 1.5rem;height: 0.5rem;text-align: center;line-height: 0.5rem;border: 0.02rem solid #ccc;border-radius: 0.1rem;}
+/*my*/
+#my header{width: 100%;height: 3.29rem;background: url(../images/my/1-01.png) no-repeat;background-size: 100%;}
+#my header section{width: 1.2rem;height: 1.2rem;border-radius: 100%;background: url(../images/my/myicon.png) no-repeat; background-size: 100%;margin:13% auto;margin-bottom: 0;}
+#my header section img{width: 1rem;height: 1rem;border-radius: 100%;margin-top: 0.1rem;}
+#my strong{font-family: "Microsoft YaHei"}
+#my .mt359{margin-top: 3.59rem}
+#my .round,#my_news .round{width: 0.3rem;border-radius: 100%;background: #c33;color: #fff;text-align: center;line-height: 0.3rem}
+.my_item{position: relative;padding-right:0.49rem;}
+.my_main{width: 100%;position:relative;}
+.v3{vertical-align: 0.03rem;}
+#my .top{top:0.1rem!important;}
+/*my_task*/
+#my_task main aside h1,#my_act main aside h1,#register main aside h1{text-align: center;height: 0.6rem;line-height: 0.6rem;width: 49%;}
+#my_task .my_task_round,#task_item .my_task_round{width: 0.9rem;border-radius: 100%;background: #09c;text-align: center;line-height: 0.9rem;color: #fff;top: 0.15rem;right: .3rem;}
+#my_task .my_task_des,#task_item .my_task_des{overflow: hidden;text-overflow:ellipsis ;}
+/*my_act*/
+#my_act .my_act_pic,#my_act .my_act_pic img,#act_item .my_act_pic,#act_item .my_act_pic img,#act_allcomment .my_act_pic,#act_allcomment .my_act_pic img{width: 2.28rem;height: 1.36rem;}
+#my_act .my_act_lable,#act_item .my_act_lable,#act_allcomment .my_act_lable,#my_act .my_act_lable_end{width: 0.4rem;height: 0.6rem;padding-top:0.05rem;background: url(../images/index/in_lable.png) no-repeat;background-size: 100%;position: absolute; margin:-1.55rem 0 0 1.81rem;}
+#my_act .my_act_lable p,#my_act .my_act_lable_end p,#act_item .my_act_lable p,#act_allcomment .my_act_lable p{color: #fff;text-align: center;transform: scale(0.9,0.9);white-space: nowrap;text-align: center;padding-top: 0.03rem}
+#my_act .my_act_lable_end{background: url(../images/my/end.png) no-repeat;background-size: 100%;}
+#my_act .shade{background: rgba(0,0,0,0.6);width: 2.28rem;position: absolute;text-align: center;line-height: 1.36rem;}
+/*my_collect*/
+#my_collect h1,#act_item h1,#task_item h1{width: 24%;text-align: center;line-height: 0.6rem;}
+#my_collect .my_collect_pic,#my_collect .my_collect_pic img{width: 1.48rem;height: 0.88rem;}
+#my_collect footer{line-height: 0.8rem;}
+#my_collect .my_collect_del,#my_accbalance .my_collect_del,#my_bindings .my_collect_del{width: 6rem;height: 2.4rem;background: #eee;border-radius: 0.1rem;position: fixed;top: 40%;left:10%;z-index: 1111; }
+#my_collect .my_collect_del p,#my_bindings .my_collect_del p{width: 100%;text-align: center;line-height: 1.42rem;}
+#my_collect .my_collect_del .my_collect_del_btn,#my_accbalance .my_collect_del .my_collect_del_btn,#my_bindings .my_collect_del .my_collect_del_btn{width: 1.4rem;height: 0.5rem;line-height: 0.5rem;margin-left: 1.1rem;border-radius: 0.05rem;}
+/*my_bank*/
+#my_bank .my_bank_ABC{background: url(../images/my/1-11.png) no-repeat;background-size: 100%;}
+#my_bank .my_bank_CCB{background: url(../images/my/1-12.png) no-repeat;background-size: 100%;}
+/*my_voucher*/
+#my_voucher .my_voucher_flour{background: url(../images/my/my_voucher_flour.png) no-repeat;background-size: 100%;}
+#my_voucher .my_voucher_dict{background: url(../images/my/my_voucher_dict.png) no-repeat;background-size: 100%;}
+#my_voucher .aa{bottom: -0.2rem;right: 0.5rem;width: 5.1rem}
+#my_voucher hr{width: 5.1rem;border:0.02rem solid #ccc;position: relative;left: 0.47rem;height: 0;}
+/*act_allcomment*/
+#act_allcomment .act_allcomment_btn{width: 0.9rem;height: 0.5rem;border-radius: 0.1rem;border:0.02rem solid #666;text-align: center;line-height: 0.5rem;}
+/*my_news*/
+#my_news .my_news_chat{width: 2.18rem;height: 1.72rem;background: url(../images/my/news-04.png) no-repeat;background-size: 100%;position: absolute;right: 0.3rem;top: 0.75rem;z-index: 1111;}
+#my_news .header_icon:last-child{right: 0.24rem;}
+#my_news .my_news_chat i{display: inline-block;height: 100%;font-size: 0;vertical-align: middle;}
+/*my_accrecharge*/
+#my_accrecharge button,#my_accbalance button,#my_binphone button,#register button{width: 6.9rem;height: 0.8rem;border-radius: 0.1rem;}
+#my_accbalance .my_collect_del p{width: 100%;text-align: center;line-height: 0.8rem;}
+/*task_item*/
+#task_item .task_item_round{width: 0.9rem;height: 0.9rem;text-align: center;border-radius: 100%;border: 0.02rem solid #09c; color: #09c;}
+/*my_editnews*/
+#my_editnews .top{top:-0.4rem;}
+#my_editnews .my_editnews_sex{position: fixed;bottom: 0;width: 100%;z-index: 11111;}
+#my_editnews .my_editnews_sex p,#my_editnews button{height: 0.6rem;line-height: 0.6rem;}
+/*my_editnews*/
+#my_editnews input.top{top:-0.05rem;}
+/*my_about*/
+.h160{width: 1.6rem;}
+/*my_binphone*/
+#my_binphone .code{width: 2rem;line-height: 0.54rem;text-align: center;border: 0.02rem solid #09c;position: relative;top: -0.1rem;}
+/*publincsearch*/
+#publincsearch header{line-height: 0.58rem;border:0;}
+#publincsearch header input{line-height: 0.5rem;border:0;}
+#publincsearch header .header_icon:last-child {position: absolute;right: 0.55rem;top: 0.2rem}
+/*act_item task_item*/
+#nav_main{width: 100%;position: absolute;z-index: 111111;}
+#nav_main section{position: absolute;width: 100%;background: #fff;display: none;padding-top: 0.3rem;}
+#nav_main section p{display: inline-block;width: 30%;text-align: center;padding: 0.1rem 0;}
+#nav_main section p:hover{color: #09c;}
+#nav_main button{width: 49%;display: inline-block;background:none;border-top: 0.02rem solid #ccc;line-height: 0.6rem;}
+.act_item_area{height: 2rem;overflow-y:scroll; }
+/*my_addbank*/
+#my_addbank #button{width: 6.9rem;height: 0.8rem;border-radius: 0.1rem;background: #fff;color: #999;display: inline-block;}

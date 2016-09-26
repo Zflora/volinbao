@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="format-detection" content="email=no"/>
+<meta charset="UTF-8">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/header.css" rel="stylesheet" type="text/css">
+<link href="css/my.css" rel="stylesheet" type="text/css">
+<title>沃邻宝</title>
+</head>
+<body class="mb98" id="register">
+    <!-- header -->
+    <header>
+        <a class="header_icon l pr24" onclick="javascript:history.back(-1); "><img src="images/header_L_right.png" alt=""></a>
+        <span class="f36">账号</span>
+        <!-- <a  class="header_icon r pl24 pr30"><img src="images/header_L_right.png" alt=""></a>  -->
+    </header>
+    <!-- header结束 -->
+    <main class="mt88">
+        <aside class="bgwh bbc mb30">
+            <h1 class="f28 dib brc bb09c">注册</h1>
+            <h1 class="f28 dib">登录</h1>
+        </aside>
+        <aside class="my_main">
+            <!-- 注册 -->
+            <section class="">
+                <div class="pt20 pb20 bbc pl30 pr30 bgwh">
+                    <p class="f28 dib w120">手机号</p>
+                    <input type="tel" maxlength="11" class="g6 f28 bdphone dib" placeholder="请输入手机号码">
+                    <p class="dib r g9 register_yz f24 mt-10">获取验证码</p>
+                </div>
+                <div class="pt20 pb20 pl30 pr30 bgwh bbc">
+                    <p class="f28 dib w120">验证码</p>
+                    <input type="tel" class="g6 f28 bdphone dib" placeholder="请输入验证码">
+                </div>
+                <div class="pt20 pb20 pl30 pr30 bgwh">
+                    <p class="f28 dib w120">密码</p>
+                    <input type="tel" class="g6 f28 bdphone dib" placeholder="请输入6-20位登录密码">
+                </div>
+                <div class="p30 p24"><input type="checkbox" class="checkbox check_input mr15 checkbox_on" checked=""><p class="dib lt1 f28 vm">我已阅读并同意《窝游云协议》</p></div>
+                <!-- 按钮 -->
+                <div class="mt88">
+                    <button class="f36 g9 ml30 bgf90 wh"><strong class="lt1">注册</strong></button>
+                </div>
+                <!-- 按钮结束 -->
+            </section>
+            <!-- 注册结束 -->
+            <!-- 登录 -->
+            <section class="dn abs">
+                <div class="pt20 pb20 bbc pl30 pr30 bgwh">
+                    <p class="f28 dib w120">手机号</p>
+                    <input type="tel" maxlength="11" class="g6 f28 bdphone dib" placeholder="请输入手机号码">
+                </div>
+                <div class="pt20 pb20 pl30 pr30 bgwh">
+                    <p class="f28 dib w120">密码</p>
+                    <input type="password" class="g6 f28 bdphone dib" placeholder="请输入6-20位登录密码" value="11" id="password">
+                    <div class="h20 dib r pt5 g09c h14"><img src="images/index/enter (2).jpg" alt="" id="eye" class="h14"></div> 
+                </div>
+                <!-- 按钮 -->
+                <div class="mt88">
+                    <button class="f36 g9 ml30 bgf90 wh mb20"><strong class="lt1">登录</strong></button>
+                    <p class="g09c f24 w tr lt1">忘记密码？</p>
+                </div>
+                <!-- 按钮结束 -->
+                <!-- 第三方登录 -->
+                <div class="tc mt100">
+                    <div>
+                        <p class="w180 dib f28"><del class="g9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</del></p>
+                        <p class="g9 f28 dib">第三方登录</p>
+                        <p class="w180 dib f28"><del class="g9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</del></p>
+
+                    </div>
+                    <div class="mt35">
+                        <img src="images/index/qq.png" alt="" class="h80 mr30 ml30">
+                        <img src="images/index/WeChat.png" alt="" class="h80 mr30 ml30">
+                        <img src="images/index/Sina.png" alt="" class="h80 mr30 ml30">
+                    </div>
+                </div>
+                <!-- 第三方登录结束 -->
+            </section>
+            <!-- 登录结束 -->
+        </aside>
+    </main>
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+$(function () {
+    // 选项卡
+    var i=0;
+    $("h1").click(function(){
+        i=$("h1").index($(this));
+        $(this).addClass("bb09c").siblings().removeClass("bb09c");
+        $(".my_main section").eq(i).show().siblings().hide();
+    })
+
+})
+//checkbox
+$("input[type='checkbox']").click(function(){
+        if (this.checked) {
+            $(this).addClass("checkbox_on");
+            console.log(1)
+        }else{
+            $(this).removeClass("checkbox_on");
+            console.log(2)
+        };
+}) 
+//密码显示隐藏
+$("#eye").click(function(){
+    var password=$("#password").val();//获取密码的内容
+    if ($(this).attr("src")=="images/index/enter (2).jpg") {//判断当前的状态
+        $("#password").attr("type","text");
+        $(this).attr("src","images/index/enter (1).jpg");
+    } else{
+        $("#password").attr("type","password");
+        $(this).attr("src","images/index/enter (2).jpg")
+    };
+    
+})
+</script>
+</html>

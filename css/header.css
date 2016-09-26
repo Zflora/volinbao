@@ -1,0 +1,16 @@
+/*header*/
+header{width:100%;height: 0.88rem;position: fixed;z-index: 99;top: 0;left: 0;text-align: center;line-height: 0.88rem;background: #09c;color: #fff;}
+header .header_icon:first-child{position: absolute;left: 0.24rem;top: 0.05rem;}
+header .header_icon:last-child{position: absolute;right: 0;top: 0.05rem;}
+header .header_icon img{height: 0.32rem;}
+footer{width: 100%;height: 0.98rem;background: #fff;position: fixed;bottom: 0;}
+footer ul li{display: inline-block;width: 25%;text-align: center;}
+.index,.index_on,.tesk,.tesk_on,.play,.play_on,.my,.my_on{width: 0.4rem;margin: 6% 39%;height: 0.4rem}
+.index{background: url(../images/footer/index.png) no-repeat ;background-size: 100%;}
+.index_on{background: url(../images/footer/index_on.png) no-repeat ;background-size: 100%;}
+.tesk{background: url(../images/footer/tesk.png) no-repeat ;background-size: 100%;}
+.tesk_on{background: url(../images/footer/tesk_on.png) no-repeat ;background-size: 100%;}
+.play{background: url(../images/footer/play.png) no-repeat ;background-size: 100%;}
+.play_on{background: url(../images/footer/play_on.png) no-repeat ;background-size: 100%;}
+.my{background: url(../images/footer/my.png) no-repeat ;background-size: 100%;}
+.my_on{background: url(../images/footer/my_on.png) no-repeat ;background-size: 100%;}

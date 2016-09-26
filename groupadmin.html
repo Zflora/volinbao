@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="format-detection" content="email=no"/>
+<meta charset="UTF-8">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/header.css" rel="stylesheet" type="text/css">
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<title>沃邻宝</title>
+</head>
+<body id="groupadmin" class="w">
+    <!-- header -->
+    <header>
+        <a class="header_icon l pr24" onclick="javascript:history.back(-1); "><img src="images/header_L_right.png" alt=""></a>
+        <span class="f36">群组管理</span>
+    </header>
+    <!-- header结束 -->
+    <!--接受消息提示 -->
+    <aside class=" mt88">
+        <p class="p15_30 f24 ">接受消息提示的群</p>
+        <section class="bgwh">
+            <div class=" bbc p15_30">
+                <div class="h60 radius dib mr30"><img src="images/1-10.png" alt="" class="h60"></div>
+                <p class="dib w514 f28 vt mt15">露Vchen</p>
+                <div class="h20 dib r mt15"><img src="images/arr_r.png" alt="" class="h20"></div>
+            </div>
+            <div class=" bbc p15_30">
+                <div class="h60 radius dib mr30"><img src="images/1-10.png" alt="" class="h60"></div>
+                <p class="dib w514 f28 vt mt15 ">露Vchen</p>
+                <div class="h20 dib r mt15"><img src="images/arr_r.png" alt="" class="h20"></div>
+            </div>
+            <div class="p15_30">
+                <div class="h60 radius dib mr30"><img src="images/1-10.png" alt="" class="h60"></div>
+                <p class="dib w514 f28 vt mt15">露Vchen</p>
+                <div class="h20 dib r mt15"><img src="images/arr_r.png" alt="" class="h20"></div>
+            </div>
+        </section>
+    </aside>
+    <!--接受消息提示结束 -->
+    <!--不接受消息提示 -->
+    <aside>
+        <p class="p15_30 f24">不接受消息提示的群</p>
+        <section class="bgwh">
+            <div class=" bbc p15_30">
+                <div class="h60 radius dib mr30"><img src="images/1-10.png" alt="" class="h60"></div>
+                <p class="dib w514 f28 vt mt15">露Vchen</p>
+                <div class="h20 dib r mt15"><img src="images/arr_r.png" alt="" class="h20"></div>
+            </div>
+            <div class=" bbc p15_30">
+                <div class="h60 radius dib mr30"><img src="images/1-10.png" alt="" class="h60"></div>
+                <p class="dib w514 f28 vt mt15 ">露Vchen</p>
+                <div class="h20 dib r mt15"><img src="images/arr_r.png" alt="" class="h20"></div>
+            </div>
+            <div class="p15_30">
+                <div class="h60 radius dib mr30"><img src="images/1-10.png" alt="" class="h60"></div>
+                <p class="dib w514 f28 vt mt15">露Vchen</p>
+                <div class="h20 dib r mt15"><img src="images/arr_r.png" alt="" class="h20"></div>
+            </div>
+        </section>
+    </aside>
+    <!--不接受消息提示结束 -->
+    <!-- 遮罩 -->
+    <aside class="shadeall dn"></aside>
+    <!-- 遮罩结束 -->
+    <!-- 管理弹框 -->
+        <aside class="rel zx2 w">
+            <section id="yesgroup" class="w dn">
+                <div class="mb20">
+                    <label class="f28 g09c bbc dib" id="yes">接受消息提示 <input type="radio" id="yes" class="radio groupradio_on rel left"></label>
+                    <label class="f28 g09c bbc dib" id="no">不接受消息提示<input type="radio" id="no" class="radio rel left"></label>
+                    <label class="f28 dib" style="color:#E73D48">退出群</label>
+                </div>
+                <div class="groupadmin_btn"><label class="f28 g09c bbc dib">取消</label></div>
+            </section>
+            <section id="nogroup" class="w dn">
+                <div class="mb20">
+                    <label class="f28 g09c bbc dib" id="yes">接受消息提示 <input type="radio" id="yes" class="radio  rel left"></label>
+                    <label class="f28 g09c bbc dib" id="no">不接受消息提示<input type="radio" id="no" class="radio rel left groupradio_on"></label>
+                    <label class="f28 dib" style="color:#E73D48">退出群</label>
+                </div>
+                <div class="groupadmin_btn"><label class="f28 g09c bbc dib">取消</label></div>
+            </section>
+        </aside>
+    <!-- 管理弹框结束 -->
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+    // 单选框
+$("input[type='radio']").click(function(){ 
+    if($(this).hasClass("groupradio_on")){  
+            $(this).removeClass("groupradio_on");
+        }else{ 
+            $(this).addClass("groupradio_on").parent("label").siblings().find("input").removeClass("groupradio_on"); 
+        } 
+})
+//弹框
+$("aside").eq(0).find(".p15_30").click(function(){
+        $(".shadeall").show();
+        $("#yesgroup").show();
+        $("#nogroup").hide();
+        document.documentElement.style.overflow='hidden';//pc禁止滚动   滚动hidden改成auto
+        document.body.style.overflow='hidden';//移动端禁止滚动   滚动hidden改成auto
+    })
+$("aside").eq(1).find(".p15_30").click(function(){
+        $(".shadeall").show();
+        $("#nogroup").show();
+        $("#yesgroup").hide();
+        document.documentElement.style.overflow='hidden';//pc禁止滚动   滚动hidden改成auto
+        document.body.style.overflow='hidden';//移动端禁止滚动   滚动hidden改成auto
+    })
+    $(".groupadmin_btn").click(function(){
+        $(".shadeall").hide();
+        $("#yesgroup").hide();
+        $("#nogroup").hide();
+        document.documentElement.style.overflow='auto';//pc禁止滚动   滚动hidden改成auto
+    })
+    $(".shadeall").click(function(){
+        $(".shadeall").hide();
+        $("#yesgroup").hide();
+        $("#nogroup").hide();
+        document.body.style.overflow='auto';//移动端禁止滚动   滚动hidden改成auto
+    })
+</script>
+</html>

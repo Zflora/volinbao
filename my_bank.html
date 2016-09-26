@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="format-detection" content="email=no"/>
+<meta charset="UTF-8">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/header.css" rel="stylesheet" type="text/css">
+<link href="css/my.css" rel="stylesheet" type="text/css">
+<title>沃邻宝</title>
+</head>
+<body class="mb98" id="my_bank">
+    <!-- header -->
+    <header>
+        <a class="header_icon l pr24" onclick="javascript:history.back(-1); "><img src="images/header_L_right.png" alt=""></a>
+        <span class="f36">我的银行卡</span>
+        <a class="header_icon r pl24 f32 wh m0 pr30" onclick="javascript:window.location.href='my_addbank.html','_self'"><img src="images/plus.png" alt=""></a> 
+    </header>
+    <!-- header结束 -->
+    <!-- 银行卡 -->
+    <aside class="pb0 mt88 p30">
+        <section class="mb10 my_bank_ABC ">
+            <div class="h70 pt40 pb40 ml30 dib"><img src="images/1-13.png" alt="" class="h70"></div>
+            <div class="dib ml20">
+                <p class="f30 wh">中国农业银行</p>
+                <p class="f40 wh"><sub>8888 8888 8888 </sub>2072</p>
+            </div>
+        </section>
+        <section class="mb10 my_bank_CCB ">
+            <div class="h70 pt40 pb40 ml30 dib"><img src="images/1-14.png" alt="" class="h70"></div>
+            <div class="dib ml20">
+                <p class="f30 wh">中国建设银行</p>
+                <p class="f40 wh"><sub>8888 8888 8888 </sub>2072</p>
+            </div>
+        </section>
+    </aside>
+    <!-- 银行卡 -->
+    
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+    $('sub').html("**** **** **** ");//赋值
+</script>
+</html>

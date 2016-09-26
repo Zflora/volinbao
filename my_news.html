@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="format-detection" content="email=no"/>
+<meta charset="UTF-8">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/header.css" rel="stylesheet" type="text/css">
+<link href="css/my.css" rel="stylesheet" type="text/css">
+<title>沃邻宝</title>
+</head>
+<body class="mb98" id="my_news">
+    <!-- header -->
+    <header>
+        <a class="header_icon"onclick="javascript:window.location.href='my.html','_self'"><img src="images/header_L_right.png" alt=""></a>
+        <span class="f36">我的消息</span>
+        <a class="header_icon" id="chat"><img src="images/my/news-02.png" alt=""></a> 
+    </header>
+    <!-- header结束 -->
+    <!-- 评论 -->
+    <aside class="bgwh pb0 mt118" onclick="javascript:window.location.href='act_allcomment.html','_self'">
+        <section class="p30">
+            <div class="h35 dib mr15"><img src="images/my/circle (1).png" alt="" class="h35"></div>
+            <p class="f28 dib inform_txt">评论</p>
+            <div class="h20 dib r pt5"><img src="images/arr_r.png" alt="" class="h20"></div>
+        </section>
+    </aside>
+    <!-- 评论 -->
+    <aside class="p30 f28">最近联系人</aside>
+    <!-- 消息 -->
+    <aside class="bgwh pb0 mb30">
+        <section>
+            <div class="p30 bbc">
+                <div class="h80 radius dib abs"><img src="images/1-10.png" alt="" class="h80"></div>
+                <div class="dib w600 dib ml90">
+                    <p class="mb30"><span class="f28">露Vchen</span><span class="f24 r g9">09:16</span></p>
+                    <p class="f24 lh30">
+                        <span class="f28 dib w514 my_news_txt vtt inform_txt">我们于日用必需的东西以外，必须还有一点无用的游戏与享乐，生活才觉得有意思。</span>
+                        <span class="round f14 r dib">2</span>
+                    </p>
+                </div>
+            </div>
+            <div class="p30 bbc">
+                <div class="h80 radius dib abs"><img src="images/1-10.png" alt="" class="h80"></div>
+                <div class="dib w600 dib ml90">
+                    <p class="mb30"><span class="f28">露Vchen</span><span class="f24 r g9">09:16</span></p>
+                    <p class="f24 lh30">
+                        <span class="f28 dib w514 my_news_txt vtt inform_txt">对面的开发了结束了非法所得分居两地酱豆腐立刻没地方流口水地方吗</span>
+                    </p>
+                </div>
+            </div>
+            <div class="p30 bbc">
+                <div class="h80 radius dib abs"><img src="images/1-10.png" alt="" class="h80"></div>
+                <div class="dib w600 dib ml90">
+                    <p class="mb30"><span class="f28">露Vchen</span><span class="f24 r g9">09:16</span></p>
+                    <p class="f24 lh30">
+                        <span class="f28 dib w514 my_news_txt vtt inform_txt">visvnsgsdfvsfvsf</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </aside>
+    <!-- 消息结束 -->
+    <!-- 发起聊天 -->
+    <aside class="my_news_chat dn" id="my_news_chat">
+        <ul class="mt20">
+            <li class="wh bbc p20" onclick="javascript:window.location.href='linkman.html','_self'">
+                <img src="images/my/news-01.png" alt="" class="h30 mr20 vm">
+                <span class="f28 vm">发起聊天</span>
+                <i></i>
+            </li>
+            <li class="wh p20" onclick="javascript:window.location.href='linkmansi.html','_self'">
+                <img src="images/my/news-03.png" alt="" class="h30 mr20 vm">
+                <span class="f28 vm">发起私聊</span>
+                <i></i>
+            </li>
+        </ul>
+    </aside>
+    <!-- 发起聊天结束 -->
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+$(function (){
+        //只显示27个字符  之后...
+        for(var i=0;i<$('.my_news_txt').length;i++){
+            var bdphone = $('.my_news_txt').eq(i).text(); //获取要改的元素内容
+            var mphone = bdphone.substr(0, 27) + '...' ;//方法
+            $('.my_news_txt').eq(i).text(mphone);//赋值
+        }
+        // 发起聊天
+        $("#chat").click(function(e){
+            if ($("#my_news_chat").hasClass("dn")) {
+                $(".dn").show();
+                e.stopPropagation();
+            }else{
+                $(".dn").hide();
+                e.stopPropagation();
+            };
+            e.stopPropagation();
+        })
+        $("body").click(function(){
+            $(".dn").hide();
+        })
+    })
+</script>
+</html>
